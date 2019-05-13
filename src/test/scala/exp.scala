@@ -1,12 +1,12 @@
 // Copyright Jacob Kesinger 2019
-package ContinuedFraction
 
+package ContinuedFraction
 import com.typesafe.scalalogging.LazyLogging
 import org.scalatest.{FlatSpec, Matchers}
 
 
 class exp extends FlatSpec with Matchers with LazyLogging {
-  def tester(x:Double, delta: Double=>Double, tol:Double=2e-15) = {
+  def tester(x:Double, delta: Double=>Double, tol:Double=2e-15): Boolean = {
     math.abs(delta(x)) < tol
   }
   // Eq (11.1.1) Cuyt et al
